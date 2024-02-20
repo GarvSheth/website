@@ -1,11 +1,24 @@
 import React from 'react'
+import { BrowserRouter, Route, Routes, useRoutes} from "react-router-dom";
+
+import Publications from './Publications/Publs_page/Publications.jsx';
+import Navbar from './Navbar/Navbar.jsx';
+import Home from './Home/Home.jsx';
+import Team from './Team/Team.jsx';
+
+import './App.css'
 
 export default function App() {
   return (
-    <div>
-          Welcome to RAID's website
-          <iframe src="https://Supercaps-e8f1f460b3eb4570a26285472c17ac34?pvs=4"></iframe>
-
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/publications" element={<Publications />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
