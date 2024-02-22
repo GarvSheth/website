@@ -20,31 +20,31 @@
     z-index: 1;
 }
 
-.fun-data-card{
+.stat-card{
     display: flex;
     flex-direction: row;
     column-gap: 10px;
     align-items: center;
 }
 
-.fun-data-card-info{
+.stat-card-info{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     line-height: 26px;
 }
 
-.fun-data-card-icon{
-    font-size: 42px;
+.stat-card-icon{
+    font-size: 44px;
 }
 
-.fun-data-card-count{
+.stat-card-count{
     font-size: 32px;
 }
-.fun-data-card-countup-tag{
+.stat-card-countup-tag{
     font-size: 32px;
 }
-.fun-data-card-category{
+.stat-card-title{
     text-transform: uppercase;
     font-size: 24px;
 }

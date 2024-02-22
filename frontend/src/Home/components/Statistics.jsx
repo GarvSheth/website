@@ -8,14 +8,14 @@ export default function Statistics() {
         <div className='statistics-container'>
             {Object.keys(RAIDStats).map((key, index) => {
                 return (
-                    <div className='fun-data-card' key={index}>
-                        <div className={`fun-data-card-icon ${RAIDStats[key][1]}`}></div>
-                        <div className='fun-data-card-info'>
-                            <div className='fun-data-card-count'>
-                                <CountUp className='fun-data-card-countup-tag' start={0} end={RAIDStats[key][0]} duration={2} />
+                    <div className='stat-card' key={index}>
+                        <div className={`stat-card-icon ${RAIDStats[key][1]}`}></div>
+                        <div className='stat-card-info'>
+                            <div className='stat-card-count'>
+                                <CountUp className='stat-card-countup-tag' start={0} end={RAIDStats[key][0]} duration={2} />
                                 &nbsp;{RAIDStats[key][2]}
                             </div>
-                            <div className='fun-data-card-category'>
+                            <div className='stat-card-title'>
                                 {key}
                             </div>
                         </div>
