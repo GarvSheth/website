@@ -10,7 +10,7 @@ export default function Home() {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
+    this.period = parseInt(period, 10) || 200;
     this.txt = '';
     this.tick();
     this.isDeleting = false;
@@ -28,7 +28,7 @@ export default function Home() {
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
     var that = this;
-    var delta = 200 - Math.random() * 100;
+    var delta = 100 - Math.random() * 50;
 
     if (this.isDeleting) { delta /= 2; }
 
@@ -59,7 +59,7 @@ export default function Home() {
       document.body.appendChild(css);
   };
 
-  const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Train", "We Predict", "We Deploy" ]';
+  const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Wish Something", "We Bring it to Life", "and We Deploy It" ]';
 
   return (
     <div className='homepage-body'>
