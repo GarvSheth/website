@@ -18,18 +18,20 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    column-gap: 20px;
 }
 
 .social-logo {
     font-size: 32px;
     color: black;
-    padding: 0px 10px;
+    padding: 0px;
 }
 
 .text-container {
     display: flex;
     flex-direction: row;
     align-items: center;
+    column-gap: 16px;
     
     width: 100%;
 
@@ -59,7 +61,7 @@
     height: 26px;
     width: 3px;
     background-color: #000;
-    margin: 0px 16px;
+    margin: 0px;
 }
 
 .copyright {

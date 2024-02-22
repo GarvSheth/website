@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import '../Home/Home.css'
+import Statistics from './components/Statistics';
 
 const texts = ['Hello','Hey','How are you'];
 
@@ -62,25 +63,29 @@ export default function Home() {
   const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Wish Something", "We Bring it to Life", "and We Deploy It" ]';
 
   return (
-    <div className='homepage-body'>
-      <div className='intro-space'>
-        <div className="intro-text1">Hey</div>
-        <div href="" className="typewrite" data-period="2000" data-type={typewriterTexts}></div>
-        <div className="intro-text2">
-          We at RAID IITJ work on some Awesome projects and participate in interesting events
-        </div>
-        <div className="intro-buttons">
-          <button href="#" class="intro-button">
-            Text1
-          </button>
-          <button href="#" class="intro-button">
-            Text2
-          </button>
-        </div>
-      </div>
-      <div className="logo">
-        <img src="RAID_logo.jpeg" alt="" className="logo-img"/>
-      </div>
-    </div>
-  )
+        <>
+            <div className='homepage-body'>
+                <div className='intro-space'>
+                    <div className="intro-text1">Hey</div>
+                    <div href="" className="typewrite" data-period="2000" data-type={typewriterTexts}></div>
+                    <div className="intro-text2">
+                    We at RAID IITJ work on some Awesome projects and participate in interesting events
+                    </div>
+                    <div className="intro-buttons">
+                    <button href="#" class="intro-button">
+                        Text1
+                    </button>
+                    <button href="#" class="intro-button">
+                        Text2
+                    </button>
+                    </div>
+                </div>
+                <div className="logo">
+                    <img src="RAID_logo.jpeg" alt="" className="logo-img"/>
+                </div>
+            </div>
+
+            <Statistics/>
+        </>
+    )
 }
