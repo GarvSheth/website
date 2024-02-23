@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import '../Home/Home.css'
+import Statistics from './components/Statistics';
 
 const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Train", "We Predict", "We Deploy" ]';
 
@@ -10,7 +11,7 @@ export default function Home() {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
+    this.period = parseInt(period, 10) || 200;
     this.txt = '';
     this.tick();
     this.isDeleting = false;
@@ -28,7 +29,7 @@ export default function Home() {
     this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
     var that = this;
-    var delta = 200 - Math.random() * 100;
+    var delta = 100 - Math.random() * 50;
 
     if (this.isDeleting) { delta /= 2; }
 
@@ -60,25 +61,29 @@ export default function Home() {
   };
 
   return (
-    <div className='homepage-body'>
-      <div className='intro-space'>
-        <div className="intro-text1">Hey</div>
-        <div href="" className="typewrite" data-period="2000" data-type={typewriterTexts}></div>
-        <div className="intro-text2">
-          We at RAID IITJ work on some Awesome projects and participate in interesting events
-        </div>
-        <div className="intro-buttons">
-          <button href="#" className="intro-button">
-            Text1
-          </button>
-          <button href="#" className="intro-button">
-            Text2
-          </button>
-        </div>
-      </div>
-      <div className="logo">
-        <img src="RAID_logo.jpeg" alt="" className="logo-img"/>
-      </div>
-    </div>
-  )
+        <>
+            <div className='homepage-body'>
+                <div className='intro-space'>
+                    <div className="intro-text1">Hey</div>
+                    <div href="" className="typewrite" data-period="2000" data-type={typewriterTexts}></div>
+                    <div className="intro-text2">
+                    We at RAID IITJ work on some Awesome projects and participate in interesting events
+                    </div>
+                    <div className="intro-buttons">
+                    <button href="#" class="intro-button">
+                        Text1
+                    </button>
+                    <button href="#" class="intro-button">
+                        Text2
+                    </button>
+                    </div>
+                </div>
+                <div className="logo">
+                    <img src="RAID_logo.jpeg" alt="" className="logo-img"/>
+                </div>
+            </div>
+
+            <Statistics/>
+        </>
+    )
 }
