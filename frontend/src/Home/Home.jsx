@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import '../Home/Home.css'
 
-const texts = ['Hello','Hey','How are you'];
+const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Train", "We Predict", "We Deploy" ]';
 
 export default function Home() {
   
@@ -59,8 +59,6 @@ export default function Home() {
       document.body.appendChild(css);
   };
 
-  const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Train", "We Predict", "We Deploy" ]';
-
   return (
     <div className='homepage-body'>
       <div className='intro-space'>
@@ -70,10 +68,10 @@ export default function Home() {
           We at RAID IITJ work on some Awesome projects and participate in interesting events
         </div>
         <div className="intro-buttons">
-          <button href="#" class="intro-button">
+          <button href="#" className="intro-button">
             Text1
           </button>
-          <button href="#" class="intro-button">
+          <button href="#" className="intro-button">
             Text2
           </button>
         </div>
