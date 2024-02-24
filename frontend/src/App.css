@@ -19,17 +19,3 @@ a{
 input:focus-visible{
     outline: none;
 }
-
-
-/* .contact-info-item {
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-} */
-
-.contact-info-item{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    column-gap: 10px;
-}
