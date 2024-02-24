@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import '../Home/styles/Home.css'
 import Statistics from './components/Statistics';
+import Bottom from './components/Bottom';
 
 const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Train", "We Predict", "We Deploy" ]';
 
@@ -86,6 +87,7 @@ export default function Home() {
         </div>
 
         <Statistics/>
+        <Bottom/>
       </>
     )
 }
