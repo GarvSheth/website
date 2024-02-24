@@ -1,12 +1,13 @@
 import React, { useState,useEffect } from 'react'
-import '../Home/Home.css'
+import '../Home/styles/Home.css'
 import Statistics from './components/Statistics';
 
 const typewriterTexts = '[ "Welcome to RAID\'s Website", "We Train", "We Predict", "We Deploy" ]';
 
 export default function Home() {
-  
   // For typewriter effect
+  // START
+
   var textType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -59,31 +60,32 @@ export default function Home() {
       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
       document.body.appendChild(css);
   };
+  // END
 
   return (
-        <>
-            <div className='homepage-body'>
-                <div className='intro-space'>
-                    <div className="intro-text1">Hey</div>
-                    <div href="" className="typewrite" data-period="2000" data-type={typewriterTexts}></div>
-                    <div className="intro-text2">
-                    We at RAID IITJ work on some Awesome projects and participate in interesting events
-                    </div>
-                    <div className="intro-buttons">
-                    <button href="#" class="intro-button">
-                        Text1
-                    </button>
-                    <button href="#" class="intro-button">
-                        Text2
-                    </button>
-                    </div>
+      <>
+        <div className='homepage-body'>
+            <div className='intro-space'>
+                <div className="intro-text1">Hey</div>
+                <div href="" className="typewrite" data-period="2000" data-type={typewriterTexts}></div>
+                <div className="intro-text2">
+                We at RAID IITJ work on some Awesome projects and participate in interesting events
                 </div>
-                <div className="logo">
-                    <img src="RAID_logo.jpeg" alt="" className="logo-img"/>
+                <div className="intro-buttons">
+                <button href="#" class="intro-button">
+                    Text1
+                </button>
+                <button href="#" class="intro-button">
+                    Text2
+                </button>
                 </div>
             </div>
+            <div className="logo">
+                <img src="RAID_logo.jpeg" alt="" className="logo-img"/>
+            </div>
+        </div>
 
-            <Statistics/>
-        </>
+        <Statistics/>
+      </>
     )
 }
