@@ -10,6 +10,9 @@ export default function PubCard(props) {
             <div className="publs-card-title">
                 <p>{publication.title}</p>
             </div>
+            <div className="publs-card-conference">
+                <p>{publication.conference}</p>
+            </div>
             <div className="publs-card-keywords">
                 {publication.keywords.map((elem)=>{return <div className='keyword'>{elem}</div>})}
             </div>
