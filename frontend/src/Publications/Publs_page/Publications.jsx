@@ -13,7 +13,7 @@ export default function Publications(){
         },
         {
             'imgUrl':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU2It7vByy0yh_LpGkmFGlz9wKlTERmQUMeA&usqp=CAU',
-            'title':'Title2',
+            'title':'Title3',
             'conference':'IEEE',
             'abstract':'So hey, its our second publication and it\'s a must read one!',
             'keywords':['keyword21','keyword22','keyword23']
